@@ -1,0 +1,12 @@
+add.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        String result= txt.getText().toString();
+                        arrayList.add(result);
+                        adapter = new ArrayAdapter<>(MainActivity.this, android.R.layout.simple_list_item_multiple_choice,arrayList);
+                        listView.setAdapter(adapter);
+                        ((EditText) findViewById(R.id.editText)).setText("");
+                        adapter.notifyDataSetChanged();
+                        }
+
+                });
